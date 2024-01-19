@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Task Master</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="/static/css/Home.css">
+</head>
+<body>
+	<div class = "navBar">
+		<a class = "titleText" href = "/">Task Master</a>
+		<a class = "navLink" href = "/dashboard">Dashboard</a>
+		{% if current_user.is_authenticated %}
+		<a class = "navLink" href="{{url_for('logout')}}">Logout</a>
+		{% endif %}
+	</div>
+	<div class = "shell">
+		<div class = "titleBox">
+			<h1 class = "Title">
+				Welcome to Task Master
+			</h1>
+		</div>
+		<div class = "description">
+			<p>
+				Task Master is a social media site where you can post tasks you want to get done and keep track of your friends' tasks. Just sign 
+				up and start posting your tasks!
+			</p>
+		</div>
+		<div class = "btns">
+			<button class = "btn1"><a href="{{ url_for('login') }}">Login</a><br></button>
+			<button class = "btn2">
+				<a href="{{ url_for('register') }}">Register</a>
+				<span class = "arrow">&rarr;</span>
+			</button>
+		</div>
+	</div>
+	<div class = "gallery">
+		<img class = "galPic" src="/static/images/clock.jpg" alt = "clock">
+		<img class = "galPic" src="/static/images/todo.jpg" alt = "todo">
+		<img class = "galPic" src="/static/images/coffee2.jpg" alt = "coffee">
+	</div>
+</body>
+</html> 

@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Unbounded:wght@700&display=swap');
+
+:root {
+    --eggshell: #E9E6FF;
+    --ultraviolet: #D2D6EF;
+    --melongreen: #4F695E;
+    --licorice: #696D7D;
+    --lime: #3d7726;
+}
+
+body{
+    background-color: var(--eggshell);
+    color:rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    color: var(--ultraviolet);
+}
+
+h1{
+    font-family: 'Unbounded', cursive;
+    color: var(--ultraviolet);
+}
+
+a{
+    color: var(--eggshell);
+    text-decoration: none;
+}
+
+.navBar{
+    background-color: var(--eggshell);
+    display:flex;
+    gap: 10px;
+    box-shadow: 0px 2px 6px #3336;
+    padding: 18px 24px;
+}
+
+.navLink{
+    font-family: 'Montserrat';
+    text-decoration: none;
+    color: #0F0F0F;
+}
+
+.title{
+    display: flex;
+    width: 65%;
+    color: var(--ultraviolet);
+}
+
+.titleBox{
+    display: flex;
+    justify-content: center;
+}
+
+.titleText{
+    margin-right:30px;
+    font-family: 'Unbounded';
+    text-decoration: none;
+    color: var(--ultraviolet);
+    background-color: var(--melongreen);
+    padding: 2px 2px;
+    border-radius:1px;
+}
+
+.description{
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat';
+    padding: 0px 32px;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius:4px;
+    box-shadow: 0px 2px 6px #3336;
+    width:50%;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:32px;
+    padding-bottom:35px;
+}
+
+.btns{
+    display:flex;
+    gap:18px;
+    padding-left:32px;
+}
+
+.btn1{
+    background-color: var(--lime);
+    border-radius:3px;
+    padding: 8px 15px;
+    border: none;
+    box-shadow: 0px 2px 6px #3336;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    color:var(--ultraviolet)
+}
+
+.btn2{
+    background-color:transparent;
+    border: none;
+    border-radius:3px;
+    padding: 8px 15px;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    color:var(--ultraviolet);
+    text-decoration: underline;
+    position:relative;
+}
+
+.btn2:hover .arrow{
+    opacity:1;
+}
+
+.shell{
+    background-color: var(--melongreen);
+    padding-bottom:45px;
+}
+.gallery{
+    padding: 2% 12%;
+    display:flex;
+    background-color: var(--eggshell);
+    justify-content:space-between;
+}
+.galPic{
+    box-shadow: 0px 2px 6px #3336;
+    border-radius:3px;
+    width: 20vw;
+    height:auto;
+}
+
+.help{
+    padding-top:10px;
+    display:flex;
+    justify-content: center;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class = "navBar">
+		<a class = "titleText" href = "/">Task Master</a>
+		<a class = "navLink" href = "/dashboard">Dashboard</a>
+		<a class = "navLink" href="{{url_for('logout')}}">Logout</a>
+	</div>
+    <div class = "shell">
+        <div class = "lBox">
+            <h1 class = "title">Tasks</h1>
+            <div>
+                {% for task in my_tasks %}
+                <div class="task">
+                    <h2>{{ task.taskName }}</h2>
+                    <p>{{ task.taskDesc }}</p>
+                    <form method="POST" action="/deleteTask/{{ task.id }}">
+                    <input type="hidden" name="task_id" value="{{ task.id }}">
+                    <button type="submit" class="btn2">Delete Task</button>
+                    </form>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class = "midBox">
+            {% if current_user.is_authenticated %}
+            <div class="titleBox">
+                <h1 class = "title">
+                {{ current_user.username }}'s dashboard
+                </h1>
+            </div>
+            <img class = "ppic" src = "/static/images/profile.jpg" alt = "profile pic">
+                {% endif %}
+            <div class = "description">
+                <h1>Hello, welcome to your dashboard.</h1>
+                <button class="btn" onclick="location.href='/addTask'">Add a Task</button>
+            </div>
+        </div>
+        <div class = "rBox">
+            <h1 class = "title">About</h1>
+            <p class = "about">
+                This is your dashboard, where you may view
+                what tasks you have set for yourself and 
+                add and remove them as you please. We reccomend
+                that you only delete a task once you have completed
+                it so as to keep you motivated to actually finish
+                the work you have started. Enjoy!
+            </p>
+        </div>
+	</div>
+    <div class = "gallery">
+		<img class = "galPic" src="/static/images/clock.jpg" alt = "clock">
+		<img class = "galPic" src="/static/images/todo.jpg" alt = "todo">
+		<img class = "galPic" src="/static/images/coffee2.jpg" alt = "coffee">
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/addTask.css">
+    <title>Add Task</title>
+</head>
+
+<body>
+    <div class = "navBar">
+		<a class = "titleText" href = "/">Task Master</a>
+		<a class = "navLink" href = "/dashboard">Dashboard</a>
+		<a class = "navLink" href="{{url_for('logout')}}">Logout</a>
+	</div>
+    <div class = "shell">
+		<div class = "titleBox">
+			<h1 class = "Title">
+				Create a Task
+			</h1>
+		</div>
+		<div class="description" style="text-align: center;">
+			<form method="POST">
+                {{ form.hidden_tag() }}
+                <p>Task Name</p>
+                {{form.taskName}}
+                <p>Task Description</p>
+                {{form.taskDesc}}
+                <br>
+                {{form.submit(class="btn1", style="padding-top: 10px")}}
+            </form>
+		</div>
+	</div>
+    <div class = "gallery">
+		<img class = "galPic" src="/static/images/clock.jpg" alt = "clock">
+		<img class = "galPic" src="/static/images/todo.jpg" alt = "todo">
+		<img class = "galPic" src="/static/images/coffee2.jpg" alt = "coffee">
+	</div>
+</body>
+
+</html>

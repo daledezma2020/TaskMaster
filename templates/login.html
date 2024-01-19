@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/Login.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class = "navBar">
+		<a class = "titleText" href = "/">Task Master</a>
+		<a class = "navLink" href = "/dashboard">Dashboard</a>
+	</div>
+    <div class = "shell">
+		<div class = "titleBox">
+			<h1 class = "Title">
+				Login Page
+			</h1>
+		</div>
+		<div class = "description">
+			<form method="POST" action>
+                {{ form.hidden_tag() }}
+                {{ form.username }}
+                {{ form.password }}
+                {{ form.submit }}
+            </form>
+		</div>
+        <a class = "help" href="{{ url_for('register') }}">Don't have an account? Sign Up</a>
+	</div>
+    <div class = "gallery">
+		<img class = "galPic" src="/static/images/clock.jpg" alt = "clock">
+		<img class = "galPic" src="/static/images/todo.jpg" alt = "todo">
+		<img class = "galPic" src="/static/images/coffee2.jpg" alt = "coffee">
+	</div>
+</body>
+
+</html>
